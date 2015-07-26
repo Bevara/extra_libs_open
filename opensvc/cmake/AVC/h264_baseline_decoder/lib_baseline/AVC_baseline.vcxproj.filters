@@ -189,9 +189,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\..\svcsvn\AVC\h264_baseline_decoder\lib_baseline\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{0344C501-1FA4-4749-8894-4E0F314B4DF5}</UniqueIdentifier>
     </Filter>

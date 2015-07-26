@@ -402,35 +402,35 @@ char *strchr(), *strrchr();
   }
 
 
-  #if defined(_WIN32) && !defined(__MINGW32__) && !defined(_WIN64)
-    #define HAS_LRINTF
-    static INLINE int lrintf(float f)
-    {
-        int i;
-        __asm
-        {
-            fld   f
-            fistp i
-        }
-        return i;
-    }
-  #elif (defined(__i386__) && defined(__GNUC__) && \
-	!defined(__CYGWIN__) && !defined(__MINGW32__))
-    #ifndef HAVE_LRINTF
-    #define HAS_LRINTF
-    // from http://www.stereopsis.com/FPU.html
-    static INLINE int lrintf(float f)
-    {
-        int i;
-        __asm__ __volatile__ (
-            "flds %1        \n\t"
-            "fistpl %0      \n\t"
-            : "=m" (i)
-            : "m" (f));
-        return i;
-    }
-    #endif /* HAVE_LRINTF */
-  #endif
+  // #if defined(_WIN32) && !defined(__MINGW32__) && !defined(_WIN64)
+    // #define HAS_LRINTF
+    // static INLINE int lrintf(float f)
+    // {
+        // int i;
+        // __asm
+        // {
+            // fld   f
+            // fistp i
+        // }
+        // return i;
+    // }
+  // #elif (defined(__i386__) && defined(__GNUC__) && \
+	// !defined(__CYGWIN__) && !defined(__MINGW32__))
+    // #ifndef HAVE_LRINTF
+    // #define HAS_LRINTF
+   // from http://www.stereopsis.com/FPU.html
+    // static INLINE int lrintf(float f)
+    // {
+        // int i;
+        // __asm__ __volatile__ (
+            // "flds %1        \n\t"
+            // "fistpl %0      \n\t"
+            // : "=m" (i)
+            // : "m" (f));
+        // return i;
+    // }
+    // #endif /* HAVE_LRINTF */
+  // #endif
 
 
   #ifdef __ICL /* only Intel C compiler has fmath ??? */
@@ -445,7 +445,7 @@ char *strchr(), *strrchr();
     #define sqrt sqrtf
 
   #else
-
+/*
 #ifdef HAVE_LRINTF
 #  define HAS_LRINTF
 #  define _ISOC9X_SOURCE 1
@@ -453,7 +453,7 @@ char *strchr(), *strrchr();
 #  define __USE_ISOC9X   1
 #  define __USE_ISOC99   1
 #endif
-
+*/
     #include <math.h>
 
 #ifdef HAVE_SINF
@@ -483,10 +483,10 @@ char *strchr(), *strrchr();
 
 #endif
 
-#ifndef HAS_LRINTF
+//#ifndef HAS_LRINTF
 /* standard cast */
-#define lrintf(f) ((int32_t)(f))
-#endif
+//#define lrintf(f) ((int32_t)(f))
+//#endif
 
 typedef real_t complex_t[2];
 #define RE(A) A[0]
