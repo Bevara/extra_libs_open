@@ -50,76 +50,70 @@ GOTO win32
 
 :win32
 echo Copying x86 extralibs
-IF "%2"=="jenkins" (set access_dir=OpenAccess-Win732bits) else (set access_dir=Access-open)
-
-IF NOT EXIST ..\%access_dir%\extra_lib\win32 ( mkdir ..\%access_dir%\extra_lib\lib\win32\debug\ && mkdir ..\%access_dir%\extra_lib\lib\win32\release\)
-IF NOT EXIST ..\%access_dir%\bin\win32 ( mkdir ..\%access_dir%\bin\win32\debug\ && mkdir ..\%access_dir%\bin\win32\release\)
+IF NOT EXIST ..\Access-open\extra_lib\win32 ( mkdir ..\Access-open\extra_lib\lib\win32\debug\ && mkdir ..\Access-open\extra_lib\lib\win32\release\)
+IF NOT EXIST ..\Access-open\bin\win32 ( mkdir ..\Access-open\bin\win32\debug\ && mkdir ..\Access-open\bin\win32\release\)
 
 copy lib\win32\release\*eay* lib\win32\debug\
 copy lib\win32\release\av* lib\win32\debug\
 copy lib\win32\release\swscale* lib\win32\debug\
-copy lib\win32\debug\*.lib ..\%access_dir%\extra_lib\lib\win32\debug\
-copy lib\win32\release\*.lib ..\%access_dir%\extra_lib\lib\win32\release\
-copy lib\win32\debug\*.dll ..\%access_dir%\bin\win32\debug\
-copy lib\win32\release\*.dll ..\%access_dir%\bin\win32\release\
-copy lib\win32\release\*.manifest ..\%access_dir%\bin\win32\release\
-copy lib\win32\debug\*.plg ..\%access_dir%\bin\win32\debug\
-copy lib\win32\release\*.plg ..\%access_dir%\bin\win32\release\
+copy lib\win32\debug\*.lib ..\Access-open\extra_lib\lib\win32\debug\
+copy lib\win32\release\*.lib ..\Access-open\extra_lib\lib\win32\release\
+copy lib\win32\debug\*.dll ..\Access-open\bin\win32\debug\
+copy lib\win32\release\*.dll ..\Access-open\bin\win32\release\
+copy lib\win32\release\*.manifest ..\Access-open\bin\win32\release\
+copy lib\win32\debug\*.plg ..\Access-open\bin\win32\debug\
+copy lib\win32\release\*.plg ..\Access-open\bin\win32\release\
 if exist xulrunner-7.0.1.en-US.win32.sdk.zip goto XULSDK_copy
 wget --no-check-certificate https://ftp.mozilla.org/pub/mozilla.org/mozilla.org/xulrunner/releases/7.0.1/sdk/xulrunner-7.0.1.en-US.win32.sdk.zip
 unzip -n xulrunner-7.0.1.en-US.win32.sdk.zip
 :XULSDK_copy
-xcopy /i /e /q /y xulrunner-sdk ..\%access_dir%\extra_lib\include\xulrunner-sdk\
+xcopy /i /e /q /y xulrunner-sdk ..\Access-open\extra_lib\include\xulrunner-sdk\
 :DekTec_copy
 unzip -n dektec_dtapi_5.2.zip
 if exist SDL-devel-1.2.15-VC.zip goto SDL_copy
 wget http://www.libsdl.org/release/SDL-devel-1.2.15-VC.zip
 unzip SDL-devel-1.2.15-VC.zip
 :SDL_copy
-IF NOT EXIST ..\%access_dir%\extra_lib\include\SDL ( mkdir ..\%access_dir%\extra_lib\include\SDL\)
-copy SDL-1.2.15\include\ ..\%access_dir%\extra_lib\include\SDL\
-copy SDL-1.2.15\lib\x86\*.lib ..\%access_dir%\extra_lib\lib\win32\debug\
-copy SDL-1.2.15\lib\x86\*.lib ..\%access_dir%\extra_lib\lib\win32\release\
-copy SDL-1.2.15\lib\x86\*.dll ..\%access_dir%\bin\win32\debug\
-copy SDL-1.2.15\lib\x86\*.dll ..\%access_dir%\bin\win32\release\
+IF NOT EXIST ..\Access-open\extra_lib\include\SDL ( mkdir ..\Access-open\extra_lib\include\SDL\)
+copy SDL-1.2.15\include\ ..\Access-open\extra_lib\include\SDL\
+copy SDL-1.2.15\lib\x86\*.lib ..\Access-open\extra_lib\lib\win32\debug\
+copy SDL-1.2.15\lib\x86\*.lib ..\Access-open\extra_lib\lib\win32\release\
+copy SDL-1.2.15\lib\x86\*.dll ..\Access-open\bin\win32\debug\
+copy SDL-1.2.15\lib\x86\*.dll ..\Access-open\bin\win32\release\
 IF "%1"=="all" GOTO win64
 GOTO done
 
 :win64
 echo Copying x64 extralibs
-IF "%2"=="jenkins" (set access_dir=OpenAccess-Win764bits) else (set access_dir=Access-open)
-
-IF NOT EXIST ..\%access_dir%\extra_lib\x64 ( mkdir ..\%access_dir%\extra_lib\lib\x64\debug\ && mkdir ..\%access_dir%\extra_lib\lib\x64\release\)
-IF NOT EXIST ..\%access_dir%\bin\x64 ( mkdir ..\%access_dir%\bin\x64\debug\ && mkdir ..\%access_dir%\bin\x64\release\)
+IF NOT EXIST ..\Access-open\extra_lib\x64 ( mkdir ..\Access-open\extra_lib\lib\x64\debug\ && mkdir ..\Access-open\extra_lib\lib\x64\release\)
+IF NOT EXIST ..\Access-open\bin\x64 ( mkdir ..\Access-open\bin\x64\debug\ && mkdir ..\Access-open\bin\x64\release\)
 
 copy lib\x64\release\*eay* lib\x64\debug\
 copy lib\x64\release\av* lib\x64\debug\
 copy lib\x64\release\swscale* lib\x64\debug\
-copy lib\x64\debug\*.lib ..\%access_dir%\extra_lib\lib\x64\debug\
-copy lib\x64\release\*.lib ..\%access_dir%\extra_lib\lib\x64\release\
-copy lib\x64\debug\*.dll ..\%access_dir%\bin\x64\debug\
-copy lib\x64\release\*.dll ..\%access_dir%\bin\x64\release\
-copy lib\x64\release\*.manifest ..\%access_dir%\bin\x64\release\
-
-
+copy lib\x64\debug\*.lib ..\Access-open\extra_lib\lib\x64\debug\
+copy lib\x64\release\*.lib ..\Access-open\extra_lib\lib\x64\release\
+copy lib\x64\debug\*.dll ..\Access-open\bin\x64\debug\
+copy lib\x64\release\*.dll ..\Access-open\bin\x64\release\
+copy lib\x64\release\*.manifest ..\Access-open\bin\x64\release\
 
 if exist xulrunner-7.0.1.en-US.win32.sdk.zip goto XULSDK_copy
 wget --no-check-certificate https://ftp.mozilla.org/pub/mozilla.org/mozilla.org/xulrunner/releases/7.0.1/sdk/xulrunner-7.0.1.en-US.win32.sdk.zip
 unzip -n xulrunner-7.0.1.en-US.win32.sdk.zip
 :XULSDK_copy
-xcopy /i /e /q /y xulrunner-sdk ..\%access_dir%\extra_lib\include\xulrunner-sdk\
+xcopy /i /e /q /y xulrunner-sdk ..\Access-open\extra_lib\include\xulrunner-sdk\
 :DekTec_copy
 unzip -n dektec_dtapi_5.2.zip
 if exist SDL-devel-1.2.15-VC.zip goto SDL_copy
 wget http://www.libsdl.org/release/SDL-devel-1.2.15-VC.zip
 unzip SDL-devel-1.2.15-VC.zip
 :SDL_copy
-IF NOT EXIST ..\%access_dir%\extra_lib\include\SDL ( mkdir ..\%access_dir%\extra_lib\include\SDL\)
-copy SDL-1.2.15\include\ ..\%access_dir%\extra_lib\include\SDL\
-copy SDL-1.2.15\lib\x64\*.lib ..\%access_dir%\extra_lib\lib\x64\debug\
-copy SDL-1.2.15\lib\x64\*.lib ..\%access_dir%\extra_lib\lib\x64\release\
-copy SDL-1.2.15\lib\x64\*.dll ..\%access_dir%\bin\x64\debug\
-copy SDL-1.2.15\lib\x64\*.dll ..\%access_dir%\bin\x64\release\
+IF NOT EXIST ..\Access-open\extra_lib\include\SDL ( mkdir ..\Access-open\extra_lib\include\SDL\)
+copy SDL-1.2.15\include\ ..\Access-open\extra_lib\include\SDL\
+copy SDL-1.2.15\lib\x64\*.lib ..\Access-open\extra_lib\lib\x64\debug\
+copy SDL-1.2.15\lib\x64\*.lib ..\Access-open\extra_lib\lib\x64\release\
+copy SDL-1.2.15\lib\x64\*.dll ..\Access-open\bin\x64\debug\
+copy SDL-1.2.15\lib\x64\*.dll ..\Access-open\bin\x64\release\
 GOTO done
 
 :MissingParameters
