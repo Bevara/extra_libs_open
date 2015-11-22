@@ -422,55 +422,55 @@
     <None Include="..\..\src\image\x86_asm\colorspace_mmx.inc" />
     <CustomBuild Include="..\..\src\image\x86_asm\colorspace_rgb_mmx.asm">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm -f win32 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm -f win32 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I..\..\src\ -I%(RootDir)%(Directory)\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I..\..\src\ -I"%(RootDir)%(Directory)\" -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm -f win32 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm -f win32 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\src\image\x86_asm\colorspace_yuv_mmx.asm">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm -f win32 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm -f win32 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I..\..\src\ -I%(RootDir)%(Directory)\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I..\..\src\ -I"%(RootDir)%(Directory)\" -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm -f win32 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm -f win32 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\src\image\x86_asm\colorspace_yuyv_mmx.asm">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm -f win32 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">nasm -f win32 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I..\..\src\ -I%(RootDir)%(Directory)\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I..\..\src\ -I"%(RootDir)%(Directory)\" -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm -f win32 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm -f win32 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Assembling %(FullPath)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I%(RootDir)%(Directory)\ -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">nasm -f win64 -DNO_PREFIX -DARCH_IS_X86_64 -DWINDOWS -I"%(RootDir)%(Directory)\" -I..\..\src\ -o $(IntDir)%(Filename).obj "%(FullPath)"
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
     </CustomBuild>
