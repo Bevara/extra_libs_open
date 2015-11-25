@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 set OLDDIR=%CD%
 cd /d %~dp0
 
