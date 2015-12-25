@@ -95,6 +95,7 @@
     <Lib>
       <OutputFile>..\..\..\lib\$(Platform)\$(Configuration)\$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -156,6 +157,7 @@
     <Lib>
       <OutputFile>..\..\..\lib\$(Platform)\$(Configuration)\$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>

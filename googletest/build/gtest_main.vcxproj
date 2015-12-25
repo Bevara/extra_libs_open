@@ -169,6 +169,7 @@
     <Lib>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
       <OutputFile>..\..\lib\$(Platform)\$(Configuration)\$(ProjectName).lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -246,6 +247,7 @@
     <Lib>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
       <OutputFile>..\..\lib\$(Platform)\$(Configuration)\$(ProjectName).lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -322,6 +324,7 @@
     <Lib>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
       <OutputFile>..\..\lib\$(Platform)\$(Configuration)\$(ProjectName).lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
@@ -398,6 +401,7 @@
     <Lib>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
       <OutputFile>..\..\lib\$(Platform)\$(Configuration)\$(ProjectName).lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
