@@ -557,9 +557,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="D:/projet/extra_libs_open/googletest/build/ZERO_CHECK.vcxproj">
       <Project>FC85DD8C-2C95-3485-B02C-E4D7CE034EC8</Project>
     </ProjectReference>
-    <ProjectReference Include="D:/projet/extra_libs_open/googletest/build/gtest.vcxproj">
-      <Project>E9255CF2-A868-3395-BB77-8C07206066A3</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
